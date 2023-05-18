@@ -11,56 +11,60 @@
 
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
-<body class="bg-[var(--Light-grayish-cyan)] w-screen h-screen">
-  <main class="flex flex-col items-center justify-center">
+<body class="bg-[var(--Light-grayish-cyan)] w-screen h-screen md:flex md:items-center md:justify-center">
+  <main class="flex flex-col items-center justify-center md:w-full">
     <div class="my-10">
       <img src="./images/logo.svg" alt="Logo tipo escrito SPLITTER">
     </div>
-    <div class="bg-[var(--White)] rounded-t-xl p-8 w-full max-w-sm h-screen">
-      <div class="flex flex-col mb-8">
-        <h1 class="text-base text-[var(--Dark-grayish-cyan)] mb-1">Bill</h1>
-        <div class="flex flex-row items-center justify-between py-2 px-4 bg-[var(--Very-light-grayish-cyan)] rounded-lg">
-          <img src="./images/icon-dollar.svg" alt="">
-          <span class="font-bold text-2xl text-[var(--Very-dark-cyan)]">142.55</span>
-        </div>
-      </div>
-      <div class="flex flex-col mb-8">
-        <h1 class="text-base text-[var(--Dark-grayish-cyan)] mb-3">Select Tip %</h1>
-        <div class="grid grid-cols-2 grid-rows-3 gap-4">
-          <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">5%</div>
-          <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">10%</div>
-          <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">15%</div>
-          <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">25%</div>
-          <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">50%</div>
-          <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--Dark-grayish-cyan)] bg-[var(--Very-light-grayish-cyan)] rounded-md p-2">Custom</div>
-        </div>
-      </div>
-      <div class="flex flex-col mb-8">
-        <h1 class="text-base text-[var(--Dark-grayish-cyan)] mb-1">Number of People</h1>
-        <div class="flex flex-row items-center justify-between py-2 px-4 bg-[var(--Very-light-grayish-cyan)] rounded-lg">
-          <img src="./images/icon-person.svg" alt="">
-          <span class="font-bold text-2xl text-[var(--Very-dark-cyan)]">5</span>
-        </div>
-      </div>
-      
-      <div class="flex flex-col rounded-xl px-6 pt-8 pb-5 bg-[var(--Very-dark-cyan)]">
-        <div class="flex flex-row justify-between items-center mb-7">
-          <div class="flex flex-col items-start justify-center">
-            <span class="text-[var(--White)] text-sm">Tip Amount</span>
-            <p class="text-xs text-[var(--Grayish-cyan)]">/ person</p>
+    <div class="bg-[var(--White)] rounded-t-xl md:rounded-xl p-8 w-full max-w-sm md:max-w-4xl h-screen md:h-max flex flex-col md:flex-row">
+      <div class="md:w-full md:pr-10">
+        <div class="flex flex-col mb-8">
+          <h1 class="text-base text-[var(--Dark-grayish-cyan)] mb-1">Bill</h1>
+          <div class="flex flex-row items-center justify-between py-2 px-4 bg-[var(--Very-light-grayish-cyan)] rounded-lg">
+            <img src="./images/icon-dollar.svg" alt="">
+            <span class="font-bold text-2xl text-[var(--Very-dark-cyan)]">0</span>
           </div>
-          <span class="text-3xl text-[var(--Strong-cyan)]">$4.27</span>
         </div>
-      
-        <div class="flex flex-row justify-between items-center mb-7">
-          <div class="flex flex-col items-start justify-center">
-            <span class="text-[var(--White)] text-sm">Total</span>
-            <p class="text-xs text-[var(--Grayish-cyan)]">/ person</p>
+        <div class="flex flex-col mb-8">
+          <h1 class="text-base text-[var(--Dark-grayish-cyan)] mb-3">Select Tip %</h1>
+          <div class="grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 gap-4">
+            <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">5%</div>
+            <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">10%</div>
+            <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">15%</div>
+            <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">25%</div>
+            <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">50%</div>
+            <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--Dark-grayish-cyan)] bg-[var(--Very-light-grayish-cyan)] rounded-md p-2">Custom</div>
           </div>
-          <span class="text-3xl text-[var(--Strong-cyan)]">$32.79</span>
+        </div>
+        <div class="flex flex-col mb-8">
+          <h1 class="text-base text-[var(--Dark-grayish-cyan)] mb-1">Number of People</h1>
+          <div class="flex flex-row items-center justify-between py-2 px-4 bg-[var(--Very-light-grayish-cyan)] rounded-lg">
+            <img src="./images/icon-person.svg" alt="">
+            <span class="font-bold text-2xl text-[var(--Very-dark-cyan)]">0</span>
+          </div>
+        </div>        
+      </div>
+
+      <div class="flex flex-col md:w-full md:justify-between rounded-xl px-6 pt-8 pb-5 bg-[var(--Very-dark-cyan)]">
+        <div class="md:flex md:flex-col">
+          <div class="flex flex-row justify-between items-center mb-7 md:mb-14 md:mt-4">
+            <div class="flex flex-col items-start justify-center">
+              <span class="text-[var(--White)] text-sm">Tip Amount</span>
+              <p class="text-xs text-[var(--Grayish-cyan)]">/ person</p>
+            </div>
+            <span class="text-3xl md:text-4xl text-[var(--Strong-cyan)]">$0.00</span>
+          </div>
+        
+          <div class="flex flex-row justify-between items-center mb-7">
+            <div class="flex flex-col items-start justify-center">
+              <span class="text-[var(--White)] text-sm">Total</span>
+              <p class="text-xs text-[var(--Grayish-cyan)]">/ person</p>
+            </div>
+            <span class="text-3xl md:text-4xl text-[var(--Strong-cyan)]">$0.00</span>
+          </div>
         </div>
       
-        <button class="bg-[var(--Strong-cyan)] p-2 rounded-md uppercase text-[var(--Very-dark-cyan)] text-lg">Reset</button>
+        <button class="bg-[var(--Strong-cyan)] p-2 rounded-md uppercase text-[var(--Very-dark-cyan)] text-lg disabled:opacity-30" disabled>Reset</button>
       </div>
     </div>
   </main>  
