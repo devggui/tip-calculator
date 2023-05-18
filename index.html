@@ -20,28 +20,38 @@
       <div class="md:w-full md:pr-10">
         <div class="flex flex-col mb-8">
           <h1 class="text-base text-[var(--Dark-grayish-cyan)] mb-1">Bill</h1>
-          <div class="flex flex-row items-center justify-between py-2 px-4 bg-[var(--Very-light-grayish-cyan)] rounded-lg">
-            <img src="./images/icon-dollar.svg" alt="">
-            <span class="font-bold text-2xl text-[var(--Very-dark-cyan)]">0</span>
-          </div>
+          <input type="number" class="text-end outline-0 border-2 border-transparent focus:border-2 focus:border-[var(--Strong-cyan)] bg-[var(--Very-light-grayish-cyan)] py-2 px-4 rounded-md font-bold text-2xl text-[var(--Very-dark-cyan)] bg-[url('./images/icon-dollar.svg')] bg-no-repeat bg-[center_left_1rem] cursor-pointer focus:cursor-text" placeholder="0">          
         </div>
         <div class="flex flex-col mb-8">
           <h1 class="text-base text-[var(--Dark-grayish-cyan)] mb-3">Select Tip %</h1>
           <div class="grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 gap-4">
-            <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">5%</div>
-            <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">10%</div>
-            <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">15%</div>
-            <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">25%</div>
-            <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--White)] bg-[var(--Very-dark-cyan)] rounded-md p-2">50%</div>
-            <div class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--Dark-grayish-cyan)] bg-[var(--Very-light-grayish-cyan)] rounded-md p-2">Custom</div>
+            <div class="flex items-center justify-center text-center relative w-full rounded-md bg-[var(--Very-dark-cyan)] hover:bg-[var(--Light-grayish-cyan)] text-[var(--White)] hover:text-[var(--Very-dark-cyan)]">
+              <input type="radio" class="custom-radio w-full h-full cursor-pointer checked:bg-[var(--Strong-cyan)] rounded-md" id="input5" name="radioGroup" value="5" onclick="tipPercentSelected(5)">
+              <label class="custom-label absolute text-xl cursor-pointer" for="checkbox5">5%</label>
+            </div>
+            <div class="flex items-center justify-center text-center relative w-full rounded-md bg-[var(--Very-dark-cyan)] hover:bg-[var(--Light-grayish-cyan)] text-[var(--White)] hover:text-[var(--Very-dark-cyan)]">
+              <input type="radio" class="custom-radio w-full h-full cursor-pointer checked:bg-[var(--Strong-cyan)] rounded-md" id="input10" name="radioGroup" value="10" onclick="tipPercentSelected(10)">
+              <label class="custom-label absolute text-xl cursor-pointer" for="checkbox10">10%</label>
+            </div>
+            <div class="flex items-center justify-center text-center relative w-full rounded-md bg-[var(--Very-dark-cyan)] hover:bg-[var(--Light-grayish-cyan)] text-[var(--White)] hover:text-[var(--Very-dark-cyan)]">
+              <input type="radio" class="custom-radio w-full h-full cursor-pointer checked:bg-[var(--Strong-cyan)] rounded-md" id="input15" name="radioGroup" value="15" onclick="tipPercentSelected(15)">
+              <label class="custom-label absolute text-xl cursor-pointer" for="checkbox15">15%</label>
+            </div>
+            <div class="flex items-center justify-center text-center relative w-full rounded-md bg-[var(--Very-dark-cyan)] hover:bg-[var(--Light-grayish-cyan)] text-[var(--White)] hover:text-[var(--Very-dark-cyan)]">
+              <input type="radio" class="custom-radio w-full h-full cursor-pointer checked:bg-[var(--Strong-cyan)] rounded-md" id="input25" name="radioGroup" value="25" onclick="tipPercentSelected(25)">
+              <label class="custom-label absolute text-xl cursor-pointer" for="checkbox25">25%</label>
+            </div>
+            <div class="flex items-center justify-center text-center relative w-full rounded-md bg-[var(--Very-dark-cyan)] hover:bg-[var(--Light-grayish-cyan)] text-[var(--White)] hover:text-[var(--Very-dark-cyan)]">
+              <input type="radio" class="custom-radio w-full h-full cursor-pointer checked:bg-[var(--Strong-cyan)] rounded-md" id="input50" name="radioGroup" value="50" onclick="tipPercentSelected(50)">
+              <label class="custom-label absolute text-xl cursor-pointer" for="checkbox50">50%</label>
+            </div>                        
+            <input type="text" class="w-full h-full flex items-center justify-center text-center text-xl text-[var(--Dark-grayish-cyan)] bg-[var(--Very-light-grayish-cyan)] rounded-md p-2 focus:text-end placeholder:text-[var(--Dark-grayish-cyan)] cursor-pointer focus:cursor-text" placeholder="Custom" name="radioGroup" id="inputCustom" onclick="clickCustomRemoveOtherCheck()">
           </div>
         </div>
-        <div class="flex flex-col mb-8">
+        <div class="flex flex-col mb-8 relative">
           <h1 class="text-base text-[var(--Dark-grayish-cyan)] mb-1">Number of People</h1>
-          <div class="flex flex-row items-center justify-between py-2 px-4 bg-[var(--Very-light-grayish-cyan)] rounded-lg">
-            <img src="./images/icon-person.svg" alt="">
-            <span class="font-bold text-2xl text-[var(--Very-dark-cyan)]">0</span>
-          </div>
+          <span class="hidden absolute right-0 text-red-500 text-sm" id="error">Can't be zero</span>
+          <input type="number" class="appearance-none text-end outline-0 border-2 border-transparent focus:border-2 focus:border-[var(--Strong-cyan)] bg-[var(--Very-light-grayish-cyan)] py-2 px-4 rounded-md font-bold text-2xl text-[var(--Very-dark-cyan)] bg-[url('./images/icon-person.svg')] bg-no-repeat bg-[center_left_1rem] cursor-pointer focus:cursor-text" id="inputPeople" placeholder="0">          
         </div>        
       </div>
 
@@ -64,9 +74,10 @@
           </div>
         </div>
       
-        <button class="bg-[var(--Strong-cyan)] p-2 rounded-md uppercase text-[var(--Very-dark-cyan)] text-lg disabled:opacity-30" disabled>Reset</button>
+        <button type="reset" class="bg-[var(--Strong-cyan)] enabled:hover:bg-[var(--Light-grayish-cyan)] p-2 rounded-md uppercase text-[var(--Very-dark-cyan)] text-lg disabled:opacity-30 disabled:cursor-default cursor-pointer" onclick="reset()" disabled>Reset</button>
       </div>
     </div>
   </main>  
+  <script src="./js/script.js"></script>
 </body>
 </html>

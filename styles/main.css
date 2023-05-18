@@ -31,3 +31,21 @@ html,
 body {
   font-family: 'Space Mono', monospace;
 }
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;  
+}
+
+.custom-checkbox:checked + .custom-label {
+  color: var(--Very-dark-cyan);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+  #myNumberInput::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
