@@ -45,7 +45,7 @@ input[type="radio"] {
 }
 
 input[type="number"]::-webkit-inner-spin-button,
-  #myNumberInput::-webkit-outer-spin-button {
-    appearance: none;
-    margin: 0;
-  }
+#myNumberInput::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
